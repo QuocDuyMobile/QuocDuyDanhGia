@@ -754,7 +754,7 @@ async function post() {
 			fetch(znsUrl, {
 				method: 'POST',
 				headers:{
-					"access-token": 'sznsb6277f2ff89c4cc6878a03bcb769e72a'
+					
 					
 				},
 				body: JSON.stringify(bodyZns)
