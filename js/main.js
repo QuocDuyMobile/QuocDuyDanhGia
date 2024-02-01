@@ -756,7 +756,7 @@ async function post() {
 			fetch(znsUrl, {
 				method: 'POST',
 				headers: {
-					"Access-Control-Allow-Origin": '*',
+					referrerPolicy: "no-referrer"
 	
 		},
 				body: JSON.stringify(bodyZns)
