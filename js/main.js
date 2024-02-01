@@ -753,7 +753,7 @@ async function post() {
 			fetch(znsUrl, {
 				method: 'POST',
 				headers: {
-					
+					'Access-Control-Allow-Origin': '*'
 				},
 				body: JSON.stringify(bodyZns)
 			}).then(function (response) {
