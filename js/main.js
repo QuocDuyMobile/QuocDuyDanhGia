@@ -753,8 +753,7 @@ async function post() {
 			fetch(znsUrl, {
 				method: 'POST',
 				headers: {
-					"Content-Type": 'application/json',
-					"Accept": 'application/json'
+					
 				},
 				body: JSON.stringify(bodyZns)
 			}).then(function (response) {
