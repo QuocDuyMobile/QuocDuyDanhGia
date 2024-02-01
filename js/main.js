@@ -737,6 +737,15 @@ async function post() {
 }
 
 function sendZNS(){
+	var json = {
+		name: $('#name').val(),
+		phone: $('#phone').val(),
+		QuanlitySP: $('input[name="rating"]:checked').val(),
+		QuanlityDV: $('input[name="like"]:checked').val(),
+		time: new Date().toString(),
+		voucher: generateString(4)
+	}
+
 	var bodyZns = {
 				// "ngay":json.time,
 				// "ten_khach": json.name,
