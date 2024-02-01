@@ -759,7 +759,7 @@ async function post() {
       					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
 					"Content-Type": 'application/json',
 					"Accept": 'application/json',
-					'access-token': 'sznsb6277f2ff89c4cc6878a03bcb769e72a'
+					"access-token": 'sznsb6277f2ff89c4cc6878a03bcb769e72a'
 				},
 				body: JSON.stringify(bodyZns)
 			}).then(function (response) {
