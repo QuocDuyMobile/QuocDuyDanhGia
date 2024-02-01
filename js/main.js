@@ -756,8 +756,7 @@ async function post() {
 					"Access-Control-Allow-Origin": "*",
       					"Access-Control-Allow-Methods": "POST",
 					"Content-Type": 'application/json',
-					"Accept": 'application/json',
-					mode: 'no-cors'
+					"Accept": 'application/json'
 				},
 				body: JSON.stringify(bodyZns)
 			}).then(function (response) {
