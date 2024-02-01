@@ -753,8 +753,6 @@ async function post() {
 			fetch(znsUrl, {
 				method: 'POST',
 				headers: {
-					"Access-Control-Allow-Origin": "*",
-      					"Access-Control-Allow-Methods": "POST",
 					"Content-Type": 'application/json',
 					"Accept": 'application/json'
 				},
