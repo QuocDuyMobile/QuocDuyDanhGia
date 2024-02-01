@@ -760,7 +760,7 @@ async function post() {
       					"Access-Control-Allow-Headers": "Content-Type, Accept, access-token",
 					"Content-Type": 'application/json',
 					"Accept": 'application/json',
-					
+					mode: 'no-cors'
 				},
 				body: JSON.stringify(bodyZns)
 			}).then(function (response) {
