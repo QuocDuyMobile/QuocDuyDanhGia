@@ -753,13 +753,14 @@ async function post() {
 			fetch(znsUrl, {
 				method: 'POST',
 				headers: {
+					"access-token": 'sznsb6277f2ff89c4cc6878a03bcb769e72a'
 					"Access-Control-Allow-Origin": "*",
       					"Access-Control-Allow-Credentials": "true",
       					"Access-Control-Allow-Methods": "POST",
       					"Access-Control-Allow-Headers": "Content-Type, Accept, access-token",
 					"Content-Type": 'application/json',
 					"Accept": 'application/json',
-					"access-token": 'sznsb6277f2ff89c4cc6878a03bcb769e72a'
+					
 				},
 				body: JSON.stringify(bodyZns)
 			}).then(function (response) {
