@@ -753,7 +753,9 @@ async function post() {
 			var znsUrl = "https://zns.atpcare.vn/api/send-zns"
 			fetch(znsUrl, {
 				method: 'POST',
-				headers: {
+				headers:{
+					"access-token": 'sznsb6277f2ff89c4cc6878a03bcb769e72a'
+					
 				},
 				body: JSON.stringify(bodyZns)
 			}).then(function (response) {
