@@ -753,7 +753,7 @@ async function post() {
 			fetch(znsUrl, {
 				method: 'POST',
 				headers: {
-					'access-control-allow-origin': 'https://quocduymobile.github.io/QuocDuyDanhGia'
+					'access-control-allow-origin': 'https://quocduymobile.github.io/QuocDuyDanhGia',
 					'Content-Type': 'application/json',
 					'access-token': 'sznsb6277f2ff89c4cc6878a03bcb769e72a'
 				},
