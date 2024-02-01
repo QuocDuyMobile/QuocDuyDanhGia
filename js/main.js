@@ -758,7 +758,6 @@ async function post() {
 				headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json',
-			'mode':'no-cors',
 			"access-token": 'sznsb6277f2ff89c4cc6878a03bcb769e72a'
 		},
 				body: JSON.stringify(bodyZns)
