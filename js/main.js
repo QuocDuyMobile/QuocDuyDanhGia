@@ -721,7 +721,7 @@ async function post() {
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json',
-			'mode':''no-cors'
+			'mode':'no-cors'
 		},
 		body: JSON.stringify(json)
 	}).then(function (response) {
@@ -754,7 +754,7 @@ async function post() {
 			fetch(znsUrl, {
 				method: 'POST',
 				headers:{
-					
+				"access-token": 'sznsb6277f2ff89c4cc6878a03bcb769e72a'
 					
 				},
 				body: JSON.stringify(bodyZns)
