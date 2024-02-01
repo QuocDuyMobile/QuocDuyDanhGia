@@ -728,8 +728,9 @@ async function post() {
 	}).then(function (response) {
 		console.log(response.status)
 		if (response.status == 201) {
-
-			var bodyZns = {
+		}
+	}).then(function (data) {
+		var bodyZns = {
 				// "ngay":json.time,
 				// "ten_khach": json.name,
 				// "ma_khach": "Đang cập nhật",
@@ -760,9 +761,6 @@ async function post() {
 			}).catch(function (err) {
 
 			});
-
-
-		}
 	}).catch(function (err) {
 
 	});
