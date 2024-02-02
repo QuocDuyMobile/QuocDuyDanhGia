@@ -727,9 +727,11 @@ async function post() {
 		console.log(response.status)
 		if (response.status == 201) {
 			localStorage.setItem('tt', JSON.stringify(json));
-			window.location.href = "thank.html";
+			window.location.replace = "thank.html";
 
 		}
 	}).catch(function (err) {
 	}
 )}
+
+
