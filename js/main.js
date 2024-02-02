@@ -720,50 +720,15 @@ async function post() {
 		method: 'POST',
 		headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'mode':'no-cors',
+			"access-token": 'sznsb6277f2ff89c4cc6878a03bcb769e72a'
 		},
 		body: JSON.stringify(json)
 	}).then(function (response) {
 		console.log(response.status)
 		if (response.status == 201) {
-
-			// var bodyZns = {
-			// 	"phone": json.phone,
-			// 	"oa_id": "3348622973284359182",
-			// 	"template_id": "310484",
-			// 	"template_data": {
-			// 		"ngay":json.time,
-			// 		"ten_khach": json.name,
-			// 		"ma_khach": "Đang cập nhật",
-			// 		"hang": "0",
-			// 		"chinh_sach": "Đang cập nhật",
-			// 		"ghi_chu": "Mã voucher của bạn là " +json.voucher
-			// 	 }
-			// }
-
-			// console.log(JSON.stringify(bodyZns))
-			// var znsUrl = "https://zns.atpcare.vn/api/send-zns"
-			// var cors = "https://cors-anywhere.herokuapp.com/"
-			// fetch(cors + znsUrl, {
-			// 	method: 'POST',
-			// 	headers: {
-			// 		'Content-Type': 'application/json',
-			// 		'access-token': 'sznsb6277f2ff89c4cc6878a03bcb769e72a'
-			// 	},
-			// 	body: JSON.stringify(bodyZns)
-			// }).then(function (response) {
-			// 	console.log("ok")
-			// 	console.log(response.text())
-			// }).catch(function (err) {
-
-			// });
-			localStorage.setItem("test",JSON.stringify(json))
-			window.location.replace("thank.html");
-
 		}
 	}).catch(function (err) {
-
-	});
-
-
-}
+	}
+)}
