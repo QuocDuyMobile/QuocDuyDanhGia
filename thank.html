@@ -70,7 +70,7 @@
                             sâu sắc về nhận xét tích cực
                             mà bạn đã chia sẻ về [sản phẩm/dịch vụ/tác phẩm của chúng tôi]. Sự ủng hộ và đánh giá của
                             bạn không chỉ là nguồn động viên lớn đối với chúng tôi mà còn là nguồn động lực để chúng tôi
-                            tiếp tục nỗ lực hơn nữa. Chúng tôi xin gửi đến bạn voucher giảm 15% khi mua các mặt hàng tại
+                            tiếp tục nỗ lực hơn nữa. Chúng tôi xin gửi đến bạn voucher <b>giảm 15%</b> khi mua các mặt hàng tại
                             cửa hàng Quốc Duy. Mã voucher <b id="voucher"></b></p>
                     </div>
                 </div>
@@ -86,16 +86,11 @@
     </div>
 
     <script>
-        var data = JSON.parse(localStorage.getItem('test'));
+        var data = JSON.parse(localStorage.getItem('tt'));
         console.log(data)
         console.log(data.voucher)
         var voucher = document.getElementById("voucher");
         voucher.innerHTML = data.voucher
-        if(data.voucher != null){
-        }else{
-            window.location.replace("index.html");
-        }
-
     </script>
 
 

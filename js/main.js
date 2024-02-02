@@ -720,14 +720,15 @@ async function post() {
 		method: 'POST',
 		headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json',
-			'mode':'no-cors',
-			"access-token": 'sznsb6277f2ff89c4cc6878a03bcb769e72a'
+			'Content-Type': 'application/json'
 		},
 		body: JSON.stringify(json)
 	}).then(function (response) {
 		console.log(response.status)
 		if (response.status == 201) {
+			localStorage.setItem('tt', JSON.stringify(json));
+			window.location.href = "thank.html";
+
 		}
 	}).catch(function (err) {
 	}
