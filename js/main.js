@@ -676,27 +676,24 @@ async function post() {
 
 	
 
-// 	fetch(url, {
-// 		method: 'POST',
-// 		headers: {
-// 			'Accept': 'application/json',
-// 			'Content-Type': 'application/json'
-// 		},
-// 		body: JSON.stringify(json)
-// 	}).then(function (response) {
-// 		console.log(response.status)
-// 		if (response.status == 201) {
-// 			localStorage.setItem('tt', JSON.stringify(json));
-// 			$('#name').val("")
-// 			$('#phone').val("")
-// 			window.location.href = "thank.html";
+	fetch(url, {
+		method: 'POST',
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(json)
+	}).then(function (response) {
+		console.log(response.status)
+		if (response.status == 201) {
+			localStorage.setItem('tt', JSON.stringify(json));
+			$('#name').val("")
+			$('#phone').val("")
+			window.location.href = "thank.html";
 
-// 		}
-// 	}).catch(function (err) {
-// 	}
-// )}
-	alert("ok")
+		}
+	}).catch(function (err) {
+	}
+)}
 
-validate()
-}
 
