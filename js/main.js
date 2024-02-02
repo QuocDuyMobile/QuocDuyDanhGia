@@ -599,48 +599,6 @@
 }());
 
 
-//my code
-// function imageSelecList() {
-// 	var selectList = document.getElementById('SanPham');
-// 	var imgUrl = "";
-
-// 	if (selectList.value == 0)
-// 		document.getElementById("showImg").style.display = 'none';
-
-// 	if (selectList.value == 1) {
-// 		imgUrl = "images/zl1.png";
-// 		document.getElementById("showImg").style.display = 'block';
-// 	}
-
-// 	if (selectList.value == 2) {
-// 		imgUrl = "images/zl2.jpg";
-// 		document.getElementById("showImg").style.display = 'block';
-// 	}
-// 	if (selectList.value == 3) {
-// 		imgUrl = "images/zl2.jpg";
-// 		document.getElementById("showImg").style.display = 'block';
-// 	}
-
-// 	if (selectList.value == 4) {
-// 		imgUrl = "images/zl2.jpg";
-// 		document.getElementById("showImg").style.display = 'block';
-// 	}
-
-// 	if (selectList.value == 5) {
-// 		imgUrl = "images/zl2.jpg";
-// 		document.getElementById("showImg").style.display = 'block';
-// 	}
-
-// 	if (selectList.value == 6) {
-// 		imgUrl = "images/zl2.jpg";
-// 		document.getElementById("showImg").style.display = 'block';
-// 	}
-
-
-// 	document.getElementById("showImgSP").src = imgUrl;
-// }
-
-
 async function post() {
 	// // checkPhone()
 	// var phone = $('#phone').val();
@@ -716,22 +674,29 @@ async function post() {
 
 	var url = "https://sheetdb.io/api/v1/3qpsp8zzwxsgm"
 
-	fetch(url, {
-		method: 'POST',
-		headers: {
-			'Accept': 'application/json',
-			'Content-Type': 'application/json'
-		},
-		body: JSON.stringify(json)
-	}).then(function (response) {
-		console.log(response.status)
-		if (response.status == 201) {
-			localStorage.setItem('tt', JSON.stringify(json));
-			window.location.replace = "thank.html";
+	
 
-		}
-	}).catch(function (err) {
-	}
-)}
+// 	fetch(url, {
+// 		method: 'POST',
+// 		headers: {
+// 			'Accept': 'application/json',
+// 			'Content-Type': 'application/json'
+// 		},
+// 		body: JSON.stringify(json)
+// 	}).then(function (response) {
+// 		console.log(response.status)
+// 		if (response.status == 201) {
+// 			localStorage.setItem('tt', JSON.stringify(json));
+// 			$('#name').val("")
+// 			$('#phone').val("")
+// 			window.location.href = "thank.html";
 
+// 		}
+// 	}).catch(function (err) {
+// 	}
+// )}
+	alert("ok")
+
+validate()
+}
 

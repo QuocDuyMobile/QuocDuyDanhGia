@@ -74,12 +74,13 @@
 
 					<div class="col-md-8 col-md-offset-2">
 						<h3>Reservation Form</h3>
+						<form>
 							<label for="name" class="sr-only">Họ Và Tên</label>
-							<input id="name" class="form-control" placeholder="Họ Và Tên" type="text">
+							<input id="name" class="form-control" placeholder="Họ Và Tên" type="text" required>
 
 							<br>
 							<label for="phone" class="sr-only">Số Điện Thoại</label>
-							<input id="phone" class="form-control" placeholder="Số Điện Thoại" type="text">
+							<input id="phone" class="form-control" placeholder="Số Điện Thoại" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required>
 
 							<br>
 
@@ -273,7 +274,7 @@
 							<!-- LIKE -->
 							<section id="like" class="ratingdv">
 								<!-- FIFTH HEART -->
-								<input type="radio" id="heart_5" name="like" value="5" hidden />
+								<input type="radio" id="heart_5" name="like" value="5" hidden/>
 								<label for="heart_5" title="Five">&#10084;</label>
 								<!-- FOURTH HEART -->
 
@@ -290,12 +291,9 @@
 								<input type="radio" id="heart_1" name="like" value="1" hidden />
 								<label for="heart_1" title="One">&#10084;</label>
 							</section>
-
-
-
 							<br>
 							<input class="btn btn-primary" value="GỬI ĐẾN QUẢN TRỊ" type="submit" onclick="post()">
-						
+						</form>
 					</div>
 					<br>
 
