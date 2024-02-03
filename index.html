@@ -74,19 +74,31 @@
 					<div class="col-md-8 col-md-offset-2">
 					
 					
-							<label for="name" class="sr-only">Họ Và Tên</label>
-							<input id="name" class="form-control" placeholder="Họ Và Tên" type="text" required>
+							<label for="hd" class="sr-only">Mã Hoá Đơn</label>
+							<span id="alertHD"></span>
+							<input id="hd" class="form-control" placeholder="Mã Hoá Đơn" type="text">
 
 							<br>
-							<label for="phone" class="sr-only">Số Điện Thoại</label>
-							<input id="phone" class="form-control" placeholder="Số Điện Thoại" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required>
+							<label for="phone" class="sr-only">Chi Nhánh</label>
+							<span id="alertChiNhanh"></span>
+							<select class="form-control" id="ChiNhanh">
+								<option value="0">---Chi Nhánh---</option>
+							  <option value="2thang9">Quốc Duy 2 Tháng 9</option>
+							  <option value="trungnuvuong">Quốc Duy Trưng Nữ Vương</option>
+							  <option value="sadec">Quốc Duy Sa Đéc</option>
+							  <option value="mytho">Quốc Duy Mỹ Tho</option>
+							  <option value="sieuthi">Quốc Duy Siêu Thị</option>
+							</select>
 
 							<br>
 
-							<span style="padding: 10px; display: flex; justify-content: center;">Chất Lượng Sản
-								Phẩm</span>
+							<label for="name" class="sr-only">Mã Nhân Viên</label>
+							<span id="alertEmp"></span>
+							<input id="nameEmp" class="form-control" placeholder="Nhân Viên Bán Hàng" type="text">
+							<br>
+							<span style="padding: 10px; display: flex; justify-content: center;">Thái Độ Phục Vụ</span>
+							<span id="alertChonDichVu" style="padding: 10px; display: flex; justify-content: center;"></span>
 							<div class="rating">
-
 								<input type="radio" name="rating" id="rating-5" value="5">
 								<label for="rating-5"></label>
 								<input type="radio" name="rating" id="rating-4" value="4">
@@ -268,8 +280,8 @@
 							</div>
 							<br>
 
-							<span style="padding: 10px; display: flex; justify-content: center;">Chất Lượng Dịch
-								Vụ</span>
+							<span style="padding: 10px; display: flex; justify-content: center;">Mức Độ Hài Lòng Sản Phẩm</span>
+							<span id="alertHaiLong" style="padding: 10px; display: flex; justify-content: center;"></span>
 							<!-- LIKE -->
 							<section id="like" class="ratingdv">
 								<!-- FIFTH HEART -->

@@ -646,54 +646,73 @@ async function post() {
 	// }).catch(function (err) {
 
 	// });
-	
+
 	//randome voucher
-	const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-	function generateString(length) {
-		let result = ' ';
-		const charactersLength = characters.length;
-		for (let i = 0; i < length; i++) {
-			result += characters.charAt(Math.floor(Math.random() * charactersLength));
+
+
+
+		const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+		function generateString(length) {
+			let result = ' ';
+			const charactersLength = characters.length;
+			for (let i = 0; i < length; i++) {
+				result += characters.charAt(Math.floor(Math.random() * charactersLength));
+			}
+
+			return result;
 		}
 
-		return result;
-	}
 
 
-
-	var json = {
-		name: $('#name').val(),
-		phone: $('#phone').val(),
-		QuanlitySP: $('input[name="rating"]:checked').val(),
-		QuanlityDV: $('input[name="like"]:checked').val(),
-		time: new Date().toString(),
-		voucher: generateString(4)
-	}
-
-
-
-	var url = "https://sheetdb.io/api/v1/3qpsp8zzwxsgm"
-
-	
-
-	fetch(url, {
-		method: 'POST',
-		headers: {
-			'Accept': 'application/json',
-			'Content-Type': 'application/json'
-		},
-		body: JSON.stringify(json)
-	}).then(function (response) {
-		console.log(response.status)
-		if (response.status == 201) {
-			localStorage.setItem('tt', JSON.stringify(json));
-			$('#name').val("")
-			$('#phone').val("")
-			window.location.href = "thank.html";
-
+		var json = {
+			MaHD: $('#hd').val(),
+			QuanlityService: $('input[name="rating"]:checked').val(),
+			SatisfiedRate: $('input[name="like"]:checked').val(),
+			time: new Date().toString(),
+			NhanVien: $('#nameEmp').val(),
+			ChiNhanh: $('#ChiNhanh').val(),
+			voucher: generateString(4)
 		}
-	}).catch(function (err) {
+
+
+
+	// 	// var url = "https://sheetdb.io/api/v1/3qpsp8zzwxsgm"
+	var hd = $('#hd');
+	var chinhanh = $('#ChiNhanh');
+	var nhanvien = $('#nameEmp');
+	var Phucvu = $('input:radio[name=rating]:checked');
+	var haiLong = $('input:radio[name=like]:checked');
+	if (hd.val().length === 0) {
+		$("#alertHD").append("Bạn chưa nhập mã hoá đơn");
+		alert("not ok")
+	} else if (chinhanh.val() == 0) {
+		$("#alertChiNhanh").append("Mời bạn chọn chi nhánh");
+	} else if (nhanvien.val().length === 0) {
+		$("#alertEmp").append("Vui lòng nhập tên nhân viên");
+	} else if (Phucvu.val() === undefined) {
+		$("#alertChonDichVu").append("Vui lòng đánh giá thái độ phục vụ");
+	} else if (haiLong.val() === undefined) {
+		$("#alertHaiLong").append("Vui lòng đánh giá");
+	} else {
+		var url = "https://sheetdb.io/api/v1/3qpsp8zzwxsgm"
+		fetch(url, {
+			method: 'POST',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(json)
+		}).then(function (response) {
+			console.log(response.status)
+			if (response.status == 201) {
+				localStorage.setItem('tt', JSON.stringify(json));
+				$('#name').val("")
+				$('#phone').val("")
+				window.location.href = "thank.html";
+
+			}
+		}).catch(function (err) {
+		}
+		)
 	}
-)}
-
-
+}
