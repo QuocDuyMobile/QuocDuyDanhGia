@@ -671,30 +671,28 @@ async function post() {
 			time: new Date().toString(),
 			NhanVien: $('#nameEmp').val(),
 			ChiNhanh: $('#ChiNhanh').val(),
-			voucher: generateString(4)
+			voucher: generateString(5)
 		}
 
 
-
-	// 	// var url = "https://sheetdb.io/api/v1/3qpsp8zzwxsgm"
 	var hd = $('#hd');
 	var chinhanh = $('#ChiNhanh');
 	var nhanvien = $('#nameEmp');
 	var Phucvu = $('input:radio[name=rating]:checked');
 	var haiLong = $('input:radio[name=like]:checked');
 	if (hd.val().length === 0) {
-		$("#alertHD").append("Bạn chưa nhập mã hoá đơn");
-		alert("not ok")
+		$("#alertHD").empty().append("Bạn chưa nhập mã hoá đơn");
 	} else if (chinhanh.val() == 0) {
 		$("#alertChiNhanh").append("Mời bạn chọn chi nhánh");
 	} else if (nhanvien.val().length === 0) {
-		$("#alertEmp").append("Vui lòng nhập tên nhân viên");
+		$("#alertEmp").empty().append("Vui lòng nhập tên nhân viên");
 	} else if (Phucvu.val() === undefined) {
 		$("#alertChonDichVu").append("Vui lòng đánh giá thái độ phục vụ");
 	} else if (haiLong.val() === undefined) {
-		$("#alertHaiLong").append("Vui lòng đánh giá");
+		$("#alertHaiLong").empty().append("Vui lòng đánh giá");
 	} else {
-		var url = "https://sheetdb.io/api/v1/3qpsp8zzwxsgm"
+		//hoco
+		var url = "https://sheetdb.io/api/v1/ih8aejyynmnq7"
 		fetch(url, {
 			method: 'POST',
 			headers: {

@@ -70,8 +70,14 @@
                             sâu sắc về nhận xét tích cực
                             mà bạn đã chia sẻ về dịch vụ của chúng tôi. Sự ủng hộ và đánh giá của
                             bạn không chỉ là nguồn động viên lớn đối với chúng tôi mà còn là nguồn động lực để chúng tôi
-                            tiếp tục nỗ lực hơn nữa. Chúng tôi xin gửi đến bạn voucher <b>giảm 15%</b> khi mua các mặt hàng tại
-                            cửa hàng Quốc Duy. Mã voucher <b id="voucher"></b> (vui lòng lưu lại mã voucher này)
+                            tiếp tục nỗ lực hơn nữa. Chúng tôi xin gửi đến bạn voucher <b>giảm 15%</b> khi mua các mặt
+                            hàng tại
+                            cửa hàng Quốc Duy.
+                            <br>
+                            <br>
+                            Với hoá đơn <b id="hd" style="font-size: 30px; color: greenyellow;"></b> mã voucher của bạn là <b id="voucher" style="font-size: 30px; color: greenyellow;"></b>. Mã voucher này có thời hạn sử dụng
+                            trong 3 tháng. Bạn đem mã này đến với cửa hàng Quốc Duy gần nhất để được giảm giá trong lần
+                            mua tiếp theo
                         </p>
                     </div>
                 </div>
@@ -88,10 +94,10 @@
 
     <script>
         var data = JSON.parse(localStorage.getItem('tt'));
-        console.log(data)
-        console.log(data.voucher)
         var voucher = document.getElementById("voucher");
         voucher.innerHTML = data.voucher
+        var maHD = document.getElementById("hd");
+        maHD.innerHTML = data.MaHD
     </script>
 
 
